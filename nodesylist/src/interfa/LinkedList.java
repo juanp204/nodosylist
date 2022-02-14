@@ -1,4 +1,5 @@
 package interfa;
+import mainpackage.Nodo;
 public interface LinkedList {
 
     /***
@@ -173,7 +174,7 @@ public interface LinkedList {
      * @param to nodo
      * @return
      */
-    LinkedList subList(LinkedListNode from, LinkedListNode to);
+    LinkedList subList(Nodo from, Nodo to);
 
     /***
      * Devuelve un array que contiene todos los elementos de esta lista.

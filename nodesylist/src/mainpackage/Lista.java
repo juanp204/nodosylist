@@ -281,7 +281,7 @@ public class Lista implements LinkedList {
     }
 
     @Override
-    public boolean remove(Object object) {
+    public boolean remove(Object object) { //wwwwwwwwaaaaaaeeeeeeeeeeeee
         Nodo n = head;
         for (int i = c; i>=1; i--) {
             if(n.getvalor()==object){
@@ -325,7 +325,7 @@ public class Lista implements LinkedList {
     }
 
     @Override
-    public boolean removeAll(Object[] objects) {
+    public boolean removeAll(Object[] objects) { //eeeeeeeeeeeeeee
         try {
             for (Object o : objects){
             Nodo n = head;
@@ -380,17 +380,24 @@ public class Lista implements LinkedList {
     }
     @Override
     public boolean set(LinkedListNode node, Object object) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Nodo n = head;
+        for (int i = c; i>=1; i--) {
+            if (n==node){n.setvalor(object);return true;}
+        }
+        return false;
     }
 
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return c;
     }
 
     @Override
-    public LinkedList subList(LinkedListNode from, LinkedListNode to) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public LinkedList subList(Nodo from, Nodo to) {
+        Lista l = new Lista();
+        l.head=from;
+        l.tail=to;
+        return l;
     }
 
     @Override
